@@ -3,5 +3,9 @@ module CommonCrypto [system] {
     export *
 }
 
+
 framework module ConfidoIOS {
+    umbrella header "ConfidoIOS.h"
+    module * { export * }
 }
+

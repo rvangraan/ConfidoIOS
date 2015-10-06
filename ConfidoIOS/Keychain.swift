@@ -13,11 +13,6 @@ public typealias ItemReference     = AnyObject
 public typealias KeyChainPropertiesData = [ String : AnyObject]
 public typealias KeychainItemData  = [ String : AnyObject]
 
-func += <KeyType, ValueType> (inout left: Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
-    for (k, v) in right {
-        left.updateValue(v, forKey: k)
-    }
-}
 public enum KeychainError : ErrorType, CustomStringConvertible {
     case
     NoSecIdentityReference,

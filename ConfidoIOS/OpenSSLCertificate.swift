@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 @objc public class OpenSSLCertificate : OpenSSLObject {
     @objc public private(set) var certificateData: NSData
     public init(certificateData: NSData) {

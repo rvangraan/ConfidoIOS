@@ -175,7 +175,6 @@ public class KeychainKeyPair : KeychainItem, KeyPair, KeychainFindable {
         var privateKeyRef : SecKey?
 
         try secEnsureOK(SecKeyGeneratePair(descriptor.keychainMatchPropertyValues(), &publicKeyRef, &privateKeyRef))
-
         return try findInKeychain(descriptor)!
         
     }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ConfidoIOS
 
 func += <KeyType, ValueType> (inout left: Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
     for (k, v) in right {
