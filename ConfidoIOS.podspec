@@ -64,11 +64,11 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/curoo/ConfidoIOS.git", :tag => "1.3.1" }
+  s.source       = { :git => "https://github.com/curoo/ConfidoIOS.git", :tag => "1.3.2" }
 
-  s.source_files  = "ConfidoIOS/*.swift", "ConfidoIOS/OpenSSL.{h,m}"
+  s.source_files  = "ConfidoIOS/*.swift", "ConfidoIOS/OpenSSL.{h,m}", "CommonCrypto/module.modulemap"
 
-  s.module_map = "CommonCrypto/module.modulemap"
+  s.module_map = "CommonCrypto/module.map"
 
 
 end
