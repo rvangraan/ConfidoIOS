@@ -127,7 +127,7 @@
 		ABBA33681BC407EA002B6FC7 /* OpenSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSSL.h; sourceTree = "<group>"; };
 		ABBA33691BC407EA002B6FC7 /* OpenSSLIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSSLIdentity.swift; sourceTree = "<group>"; };
 		ABBA336A1BC407EA002B6FC7 /* OpenSSLObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSSLObject.swift; sourceTree = "<group>"; };
-		ABBA33711BC4087B002B6FC7 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		ABBA33781BC41B18002B6FC7 /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
 		B6933143883CF50B5E488FCA /* libPods-ConfidoIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfidoIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,7 +168,6 @@
 				AB3D20D91BB0565400BB2899 /* KeychainKey.swift */,
 				AB3D20DA1BB0565400BB2899 /* KeychainKeyPair.swift */,
 				AB3D20DB1BB0565400BB2899 /* KeychainProtocol.swift */,
-				ABBA33711BC4087B002B6FC7 /* module.modulemap */,
 				ABBA33681BC407EA002B6FC7 /* OpenSSL.h */,
 				ABBA33651BC407EA002B6FC7 /* OpenSSL.m */,
 				ABBA33661BC407EA002B6FC7 /* OpenSSLCertificate.swift */,
@@ -221,6 +220,7 @@
 		AB710E9D1BA060FB003AE8B0 = {
 			isa = PBXGroup;
 			children = (
+				ABBA33771BC41B18002B6FC7 /* CommonCrypto */,
 				AB3D21461BB05B3500BB2899 /* ConfidoIOS.podspec */,
 				AB3D20781BB033FC00BB2899 /* README.md */,
 				AB3D20D11BB0565400BB2899 /* ConfidoIOS */,
@@ -238,6 +238,14 @@
 				AB710EB21BA060FB003AE8B0 /* ConfidoIOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ABBA33771BC41B18002B6FC7 /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA33781BC41B18002B6FC7 /* module.map */,
+			);
+			path = CommonCrypto;
 			sourceTree = "<group>";
 		};
 		C6BC2230DEDAE7CF9BE590A5 /* Frameworks */ = {
@@ -565,11 +573,11 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MODULEMAP_FILE = ConfidoIOS/module.modulemap;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.curoo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ConfidoIOS;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
 			};
 			name = Debug;
 		};
@@ -652,11 +660,11 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MODULEMAP_FILE = ConfidoIOS/module.modulemap;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.curoo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ConfidoIOS;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CommonCrypto";
 			};
 			name = Release;
 		};

@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/curoo/ConfidoIOS.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/curoo/ConfidoIOS.git", :tag => "1.2.0" }
 
   s.source_files  = "ConfidoIOS/*.swift", "ConfidoIOS/OpenSSL.{h,m}"
 
